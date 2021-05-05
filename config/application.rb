@@ -37,4 +37,3 @@ module RunteqNormal
     config.generators.system_tests = nil
   end
 end
-

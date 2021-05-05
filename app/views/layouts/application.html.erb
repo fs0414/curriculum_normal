@@ -8,8 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+  <header><%= render 'shared/header.html.erb' %></header>
 
   <body>
     <%= yield %>
   </body>
+  <footer><%= render 'shared/footer.html.erb' %></footer>
 </html>

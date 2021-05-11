@@ -63,3 +63,8 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'font-awesome-sass'
+
+gem 'sorcery'
+gem 'pry-byebug'
+
+gem 'bcrypt-ruby'

@@ -8,10 +8,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header><%= render 'shared/header.html.erb' %></header>
-
-  <body>
-    <%= yield %>
+  
+    <body>
+    <% if logged_in? %>
+      <%= render 'shared/header.html.erb' %>
+    <%else%>
+      <%= render 'shared/before_login_header' %>
+    <%end%>  
+    <%= yield %>  
+    <%= render 'shared/footer' %>
   </body>
-  <footer><%= render 'shared/footer.html.erb' %></footer>
 </html>

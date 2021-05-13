@@ -1,11 +1,12 @@
 class UserSessionsController < ApplicationController
+  
   def new; end
 
   def create
-    @user　= login(params[:email], params[:password])
-    if @user　
+    @user = login(params[:email], params[:password])
+    if @user.save
       redirect_back_or_to root_path
-      else
+    else
       render :new
     end
   end

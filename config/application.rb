@@ -27,7 +27,8 @@ module RunteqNormal
     end
 
     config.i18n.default_locale = :ja
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
+    end
   end
     # Initialize configuration defaults for originally generated Rails version.
     # Settings in config/environments/* take precedence over those specified here.
@@ -36,10 +37,6 @@ module RunteqNormal
     # the framework and any gems in your application.
 
     # Don't generate system test files.
-    config.generators.system_tests = nil
-  end
+    
 
   
-
-
-end

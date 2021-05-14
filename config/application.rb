@@ -23,9 +23,12 @@ module RunteqNormal
     config.generators do |g|
       g.assets false
       g.helper false
-      g.test_framework false
-      g.skip_routes true
+      g.test_framework false     
     end
+
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+  end
     # Initialize configuration defaults for originally generated Rails version.
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -35,4 +38,8 @@ module RunteqNormal
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
+
+  
+
+
 end

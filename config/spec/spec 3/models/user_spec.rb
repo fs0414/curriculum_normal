@@ -27,8 +27,8 @@ RSpec.describe User, type: :model do
 
   it '姓名は255文字以下であること' do
     user = build(:user)
-    user.first_name = "a" * 256
-    user.last_name = "b" * 256
+    user.first_name = 'a' * 256
+    user.last_name = 'b' * 256
     user.valid?
     expect(user.errors[:first_name]).to include('is too long (maximum is 255 characters)')
     expect(user.errors[:last_name]).to include('is too long (maximum is 255 characters)')

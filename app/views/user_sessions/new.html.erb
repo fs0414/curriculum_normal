@@ -1,6 +1,6 @@
 <div class="container">
    <div class="row">
-     <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+     <div class="col-md-10 offset-md-4 col-lg-8 offset-lg-2">
        <h1><%= t '.title' %></h1>
        <%= form_with url: login_path, local: true do |f| %>
          <div class = "form-group">
@@ -12,7 +12,7 @@
            <%= f.password_field :password, class: 'form-control' %>
          </div>
          <div class = "actions">
-           <%= f.submit (t 'defaults.login'), class: 'btn btn-primary' %>
+           <%= f.submit (t '.title'), class: 'btn btn-primary' %>
          </div>
        <% end %>
        <div class='text-center'>

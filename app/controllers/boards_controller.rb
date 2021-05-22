@@ -6,8 +6,9 @@ class BoardsController < ApplicationController
   def new
     @board = Board.new
   end
+
   def create
-     @board = current_user.boards.build(board_params)
+    @board = current_user.boards.build(board_params)
      if @board.save
        redirect_to boards_path, success: t('defaults.message.created', item: Board.model_name.human)
      else
@@ -15,10 +16,13 @@ class BoardsController < ApplicationController
        render :new
      end
   end
+  
   def show
     @board = Board.find(params[:id])
   end
+
   private
+
   def board_params
     params.require(:board).permit(:title, :body)
   end

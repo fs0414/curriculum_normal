@@ -5,13 +5,8 @@ ja:
      logout: 'ログアウト'
      message:
        require_login: 'ログインしてください'
-<<<<<<< HEAD
-       created: "%{item}を作成しました"
-       not_created: "%{item}を作成できませんでした"
-=======
        created: '%{item}を作成しました'
        not_created: '%{item}を作成できませんでした'
->>>>>>> master
    users:
      new:
        title: 'ユーザー登録'
@@ -32,11 +27,7 @@ ja:
    boards:
      index:
        title: '掲示板一覧'
-<<<<<<< HEAD
-       no_result: '掲示板がありません。'
-=======
        no_result: '掲示板がありません'
->>>>>>> master
      new:
        title: '掲示板作成'
        register: '登録する'

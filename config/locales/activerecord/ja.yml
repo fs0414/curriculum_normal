@@ -12,9 +12,4 @@ ja:
          first_name: '名'
        board:
          title: 'タイトル'
-<<<<<<< HEAD
          body: '本文'
-         
-=======
-         body: '本文'
->>>>>>> master

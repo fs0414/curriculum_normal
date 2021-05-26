@@ -72,3 +72,7 @@ gem 'pry-rails'
 gem 'rails-i18n', '~> 5.1'
 
 gem 'draper'
+
+gem 'mini_magick'
+
+gem 'carrierwave'

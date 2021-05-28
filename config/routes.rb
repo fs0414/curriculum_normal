@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'boards/index'
-  get 'board/index'
   root 'static_pages#top'
 
   get 'login', to: 'user_sessions#new'
@@ -8,6 +6,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   resources :users, only: %i[new create]
-  resources :boards, only: %i[index new create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :boards, only: %i[index new create show] do
+    resources :comments, only: %i[create], shallow: true
+  end
 end

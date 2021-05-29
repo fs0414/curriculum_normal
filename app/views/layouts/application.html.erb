@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RunteqNormal</title>
+    <title>
+    <%= yield(:top) %>
+    <%= yield(:login) %>
+    <%= yield(:new) %>
+    <%= yield(:board_create) %>
+    <%= yield(:board_index) %>
+    <%= yield(:board_show) %>
+
+    </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

@@ -23,6 +23,27 @@ class BoardsController < ApplicationController
     @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
 
+  def edit
+    @board = current_user.boards.find(params[:id])
+  end
+
+  def update
+    @board = current_user.boards.find(params[:id])
+    if @board.update(board_params)
+      redirect_to @board, success: t('.success')
+    else
+      flash.now['danger'] = t('.fail')
+      render :edit
+    end
+  end
+
+  def destroy
+    @board = current_user.boards.find(params[:id])
+    if @board.destroy!
+      redirect_to boards_path, success: t('.success')
+    end
+  end
+
   private
 
   def board_params

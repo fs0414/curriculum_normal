@@ -39,9 +39,8 @@ class BoardsController < ApplicationController
 
   def destroy
     @board = current_user.boards.find(params[:id])
-    if @board.destroy!
-      redirect_to boards_path, success: t('.success')
-    end
+    @board.destroy!
+    redirect_to boards_path, success: t('.success')
   end
 
   private

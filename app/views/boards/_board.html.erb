@@ -9,7 +9,7 @@
          <% if current_user.own?(board) %>
           <%= render 'crud_menus', board: board %>
          <% else %>
-         <%= render 'bookmark_arera', board: board %>
+          <%= render 'bookmark_arera', board: board %>
          <% end %>
          <ul class="list-inline">
            <li class="list-inline-item">

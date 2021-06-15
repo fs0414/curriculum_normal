@@ -76,3 +76,5 @@ gem 'draper'
 gem 'mini_magick'
 
 gem 'carrierwave'
+
+gem 'kaminari'

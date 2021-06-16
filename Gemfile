@@ -78,3 +78,5 @@ gem 'mini_magick'
 gem 'carrierwave'
 
 gem 'kaminari'
+
+gem 'ransack'

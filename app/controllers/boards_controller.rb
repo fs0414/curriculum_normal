@@ -45,7 +45,7 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-     @q = current_user.bookmark_boards.ransack(params[:q])
+    @q = current_user.bookmark_boards.ransack(params[:q])
     @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 

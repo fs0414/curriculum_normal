@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   def show; end
+
   def edit
     @user = User.find(current_user.id)
   end
@@ -7,7 +8,7 @@ class ProfilesController < ApplicationController
   def update
     @user = User.find(current_user.id)
     if @user.update(user_params)
-      redirect_to profiles_path, success: t('defaults.message.updated', item: User.model_name.human)
+      redirect_to profile_path, success: t('defaults.message.updated', item: User.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: User.model_name.human)
       render :edit

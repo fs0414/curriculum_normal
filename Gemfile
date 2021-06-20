@@ -15,8 +15,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -31,6 +29,25 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'font-awesome-sass', '~> 5.11.2'
+gem 'jquery-rails'
+
+gem 'sorcery', '0.14.0'
+gem 'pry-byebug'
+
+gem 'rails-i18n', '~> 5.1'
+gem 'draper'
+
+gem 'carrierwave'
+
+gem 'kaminari'
+
+gem 'ransack'
+
+gem 'config', '2.0.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -52,6 +69,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do
@@ -62,21 +80,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'font-awesome-sass'
-
-gem 'sorcery'
-gem 'pry-byebug'
-
 gem 'pry-rails'
 
-gem 'rails-i18n', '~> 5.1'
-
-gem 'draper'
-
 gem 'mini_magick'
-
-gem 'carrierwave'
-
-gem 'kaminari'
-
-gem 'ransack'

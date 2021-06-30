@@ -6,8 +6,7 @@ class Admin::UsersController < Admin::BaseController
     @users = @q.result(distinct: true).order(created_at: :desc).page(params[:page])
   end
 
-  def edit; 
-  end
+  def edit; end
 
   def update
     if @user.update(user_params)
